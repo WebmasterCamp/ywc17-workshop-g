@@ -1,8 +1,32 @@
 {
   "name": "ywc17-workshop-g",
-  "alias": ["workshop-g.ywc17.ywc.in.th"],
-  "regions": ["all"],
+  "alias": [
+    "workshop-g.ywc17.ywc.in.th"
+  ],
+  "regions": [
+    "all"
+  ],
   "builds": [
-    { "src": "**/*", "use": "@now/static" }
+    {
+      "src": "./app/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "app/$1",
+      "continue": true
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": ".*",
+      "dest": "app/index.html"
+    }
   ]
 }
