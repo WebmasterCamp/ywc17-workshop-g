@@ -64,12 +64,13 @@ function Search(){
     const [selectedCategory, setSelectedCategory] = useState(location.state.selectedCategory || 'dishes');
     const [selectedWage, setSelectedWage] = useState(location.state.selectedWage || [150, 500]);
     const [selectedAge, setSelectedAge] = useState(location.state.selectedAge || [24, 62]);
+    const [selectedLocation, setLocation] = useState(location.state.selectedLocation);
 
     return (
         <Container fluid>
             <Row>
-                <Form className="pt-5">
-                    <Form.Check>
+                <Col md={{span: 3}} className="pt-4 px-4 search-sidebar">
+                    <Form>
                         <Form.Group controlId="category">
                             <Row>
                                 <Col>
@@ -92,7 +93,7 @@ function Search(){
                         </Form.Group>
                         <Form.Group controlId="location">
                             <Form.Label>location</Form.Label>
-                            <Form.Control type="text" placeholder="Bangkok..." value={location.state.selectedLocation}></Form.Control>
+                            <Form.Control type="text" placeholder="Bangkok..." value={selectedLocation} onChange={c => setLocation(c.target.value)}></Form.Control>
                         </Form.Group>
                         <Form.Group controlId="gender">
                             <Form.Label>gender</Form.Label>
@@ -126,8 +127,8 @@ function Search(){
                             ></Slider>
                             </Form.Group>
                         <Button>Update Filters</Button>
-                    </Form.Check>
-                </Form>
+                    </Form>
+                </Col>
                 <Col>
                     <div>
                         <h2>3 Results</h2>
