@@ -198,11 +198,11 @@ function Search () {
                             </Row>
                         </Form.Group>
                         <Form.Group controlId="location">
-                            <Form.Label>location</Form.Label>
-                            <Form.Control type="text" placeholder="Bangkok..." value={selectedLocation} onChange={c => setLocation(c.target.value)}></Form.Control>
+                            <Form.Label className="sarabun">location</Form.Label>
+                            <Form.Control className="sarabun" type="text" placeholder="Bangkok..." value={selectedLocation} onChange={c => setLocation(c.target.value)}></Form.Control>
                         </Form.Group>
                         <Form.Group controlId="gender">
-                            <Form.Label>gender</Form.Label>
+                            <Form.Label className="sarabun">gender</Form.Label>
                             <div className="d-flex justify-content-start">
                                 <MaleFemaleIcon style={{ height: '40px'}} 
                                     className={'gender-icon ' + (selectedGender == 'any' ? 'active' : '')}
@@ -219,20 +219,20 @@ function Search () {
                             </div>
                         </Form.Group>
                         <Form.Group controlId="wage">
-                            <Form.Label>Wage</Form.Label>
+                            <Form.Label className="sarabun">Wage</Form.Label>
                             <br></br>
                             <Slider id="wage-slider" tooltip="always" value={selectedWage} min={150} max={500} step={10} change={c => setSelectedWage(c.target.value)}
                                 formatter={value => value[0] + ' - ' + value[1]}
                             ></Slider>
                         </Form.Group>
                         <Form.Group controlId="age">
-                            <Form.Label>Age</Form.Label>
+                            <Form.Label className="sarabun">Age</Form.Label>
                             <br></br>
                             <Slider id="age-slider" tooltip="always" value={selectedAge} min={24} max={62} step={1} change={c => setSelectedAge(c.target.value)}
                                 formatter={value => value[0] + ' - ' + value[1]}
                             ></Slider>
                             </Form.Group>
-                        <Button>Update Filters</Button>
+                        <Button className="sarabun">Update Filters</Button>
                     </Form>
                 </Col>
                 <Col>

@@ -167,10 +167,10 @@ function Profile() {
             <SuccessModal show={showSuccessModal} handleClose={() => setShowSuccessModal(false)} />
             <Accordion>
                 <Card>
-                    <Accordion.Toggle as={Card.Header} eventKey="0">
-                        อ่านฉันสิ !!!
+                    <Accordion.Toggle as={Card.Header} eventKey="0" className="sarabun">
+                        คลิกเพื่อดูเรื่องราวเพิ่มเติม
                         <Accordion.Collapse eventKey="0">
-                            <Card.Body>{dataH.Story}</Card.Body>
+                            <Card.Body className="sarabun">{dataH.Story}</Card.Body>
                         </Accordion.Collapse>
                     </Accordion.Toggle>
                 </Card>
@@ -180,7 +180,7 @@ function Profile() {
                     <Image src={dataH.img} roundedCircle style={{padding: '2em', width: '400px', height: '400px'}}></Image>
                     <Media.Body className="mt-5">
                         <h3>{dataH.name}</h3>
-                        <p>
+                        <p className="sarabun">
                         เพศ : {dataH.sex}<br></br>
                         อายุ : {dataH.age} ปี<br></br>
                         ประสบการณ์ทำงาน : {dataH.exp} <br></br>
@@ -189,7 +189,7 @@ function Profile() {
                         <h4>ทักษะ</h4>
                         <div>
                             {dataH.skill.map(item =>{
-                                return <Badge className="mx-2" variant="dark">{item}</Badge>
+                                return <Badge className="mx-2 sarabun" variant="dark">{item}</Badge>
                             })}
                         </div>
                         <h4>Rating</h4>
@@ -225,7 +225,7 @@ function Profile() {
                             ></Rating>
                         </Card.Body>
                     <Card.Footer><em>ชื่อผู้ให้คะแนน : {item.reviewer}</em></Card.Footer>
-                    <p>{item.review}</p>
+                    <p className="sarabun pl-4">{item.review}</p>
                 </Card>
                 })}
             </Container>

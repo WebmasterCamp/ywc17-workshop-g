@@ -12,7 +12,7 @@ function Navbar() {
         <BSNavbar 
             className="navbar"
             variant="light"
-            style={{position: 'sticky', width: '100%', zIndex: '1000', top: '0'}}
+            style={{position: 'sticky', width: '100%', zIndex: '3000', top: '0'}}
         >
         <Link to="/">
             <BSNavbar.Brand style={{color: '#000000'}}>
