@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Col, Row, Form, Button, Image, Media, Badge } from 'react-bootstrap';
 import Slider from 'react-bootstrap-slider';
 import Rating from 'react-rating';
+import { Link } from 'react-router-dom';
 
+import { ReactComponent as MaleFemaleIcon } from '../assets/malefemale.svg';
+import { ReactComponent as MaleIcon } from '../assets/male.svg';
+import { ReactComponent as FemaleIcon } from '../assets/female.svg';
+
+import '../hire/Hire.scss'
 
 function CategoryPreviewFilter({ categoryName }) {
     return (
@@ -14,7 +20,41 @@ function CategoryPreviewFilter({ categoryName }) {
     )
 }
 
+function PersonCard() {
+    return (
+        <div>
+        <Media style={{textDecoration: 'none'}}>
+            <Image src="https://via.placeholder.com/150" roundedCircle></Image>
+            <Media.Body className="px-3">
+                <Link to="/profile">
+                    <h3>header</h3>
+                </Link>
+                <div>
+                    <span>name</span>
+                    <Badge variant="dark" className="mx-2">Cat1</Badge>
+                    <Badge variant="dark" className="mx-2">Cat1</Badge>
+                </div>
+                <Rating
+                    start={0}
+                    stop={5}
+                    step={1}
+                    fractions={2}
+                    initialRating={2.5}
+                    readonly
+                ></Rating>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci laborum voluptate minima maiores mollitia tempore asperiores! Quibusdam omnis debitis pariatur quisquam id nulla, suscipit ex. Illo pariatur impedit quos debitis?
+                </p>
+            </Media.Body>
+        </Media>
+        <hr></hr>
+        </div>
+    )
+}
+
 function Search(){
+    const [selectedGender, setSelectedGender] = useState('any');
+
     return (
         <Container fluid>
             <Row>   
@@ -41,15 +81,18 @@ function Search(){
                         <Form.Group controlId="gender">
                             <Form.Label>gender</Form.Label>
                             <div className="d-flex justify-content-start">
-                                <div>
-                                    Male + female    
-                                </div>
-                                <div>
-                                    Male
-                                </div>
-                                <div>
-                                    Female
-                                </div>
+                                <MaleFemaleIcon style={{ height: '40px'}} 
+                                    className={'gender-icon ' + (selectedGender == 'any' ? 'active' : '')}
+                                    onClick={() => setSelectedGender('any')}
+                                />
+                                <MaleIcon 
+                                    className={'gender-icon ' + (selectedGender == 'male' ? 'active' : '')}
+                                    onClick={() => setSelectedGender('male')}
+                                />
+                                <FemaleIcon
+                                    className={'gender-icon ' + (selectedGender == 'female' ? 'active' : '')}
+                                    onClick={() => setSelectedGender('female')}
+                                />
                             </div>
                         </Form.Group>
                         <Form.Group controlId="age">
@@ -66,29 +109,12 @@ function Search(){
                     </Form.Check>
                 </Form>
                 <Col>
-                    <h1>(n) Results</h1>
-                    <Media>
-                        <Image src="https://via.placeholder.com/150" roundedCircle></Image>
-                        <Media.Body className="px-3">
-                            <h3>header</h3>
-                            <div>
-                                <span>name</span>
-                                <Badge variant="dark" className="mx-2">Cat1</Badge>
-                                <Badge variant="dark" className="mx-2">Cat1</Badge>
-                            </div>
-                            <Rating
-                                start={0}
-                                stop={5}
-                                step={1}
-                                fractions={2}
-                                initialRating={2.5}
-                                readonly
-                            ></Rating>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci laborum voluptate minima maiores mollitia tempore asperiores! Quibusdam omnis debitis pariatur quisquam id nulla, suscipit ex. Illo pariatur impedit quos debitis?
-                            </p>
-                        </Media.Body>
-                    </Media>
+                    <div>
+                        <h2>3 Results</h2>
+                        <PersonCard />
+                        <PersonCard />
+                        <PersonCard />
+                    </div>
                 </Col>
             </Row>
         </Container>
