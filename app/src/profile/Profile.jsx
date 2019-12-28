@@ -1,18 +1,64 @@
-import React from 'react';
-import { Accordion, Card, Button, Image, Container, Media, Badge } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Accordion, Card, Button, Image, Container, Media, Badge, Modal } from 'react-bootstrap';
 import Rating from 'react-rating';
 
+function ConfirmationModal({show, handleClose, handleConfirm}) {
+    return (
+        <Modal show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
+            <Modal.Title>Modal heading</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+            <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+                Close
+            </Button>
+            <Button variant="primary" onClick={handleConfirm}>
+                Confirm
+            </Button>
+            </Modal.Footer>
+        </Modal>
+    )
+}
+
+
+function SuccessModal({show, handleClose}) {
+    return (
+        <Modal show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
+            <Modal.Title>Success!</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+            <Modal.Footer>
+            <Button variant="primary" onClick={handleClose}>
+                OK
+            </Button>
+            </Modal.Footer>
+        </Modal>
+    )
+}
+
+
 function Profile() {
+    const [showModal, setShowModal] = useState(false);
+    const [showSuccessModal, setShowSuccessModal] = useState(false);
+
+    function handleConfirm() {
+        setShowModal(false);
+        setShowSuccessModal(true);
+    }
+
     return (
         <div>
+            <ConfirmationModal show={showModal} handleClose={() => setShowModal(false)} handleConfirm={handleConfirm}/>
+            <SuccessModal show={showSuccessModal} handleClose={() => setShowSuccessModal(false)} />
             <Accordion>
                 <Card>
                     <Accordion.Toggle as={Card.Header} eventKey="0">
-                        Click me!
+                        <Accordion.Collapse eventKey="0">
+                            <Card.Body>Hello! I'm the body</Card.Body>
+                        </Accordion.Collapse>
                     </Accordion.Toggle>
-                    <Accordion.Collapse eventKey="0">
-                        <Card.Body>Hello! I'm the body</Card.Body>
-                    </Accordion.Collapse>
                 </Card>
             </Accordion>
             <Container fluid>
@@ -46,7 +92,7 @@ function Profile() {
                         ></Rating>
 
                     <br />
-                    <Button>Hire</Button>
+                    <Button onClick={() => setShowModal(true)}>Hire</Button>
 
                     </Media.Body>
                 </Media>
