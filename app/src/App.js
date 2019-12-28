@@ -23,7 +23,7 @@ function App() {
             <Route path="/search">
               <Search />
             </Route>
-            <Route path="/profile">
+            <Route path="/profile/:id">
               <Profile />
             </Route>
           </Switch>

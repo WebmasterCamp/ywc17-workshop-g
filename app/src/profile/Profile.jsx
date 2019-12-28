@@ -8,7 +8,7 @@ import p3 from "../img/3.jpg";
 import p4 from "../img/4.jpg";
 
 import Query_string from 'query-string'
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation, useParams, useRouteMatch } from 'react-router-dom';
 
 function ConfirmationModal({show, handleClose, handleConfirm}) {
     return (
@@ -146,9 +146,9 @@ function Profile() {
         },
     ]
     const location = useLocation();
-    const HomeLessId = location.search.split('=')[1]
-    const homelessdata = data.filter(item => item.id == HomeLessId)
-    const [dataH, h] = useState(homelessdata[0]);
+    const match = useRouteMatch();
+    const HomeLessId = match.params.id;    
+    const dataH = data[HomeLessId]
     const [showModal, setShowModal] = useState(false);
     const [showSuccessModal, setShowSuccessModal] = useState(false);
 

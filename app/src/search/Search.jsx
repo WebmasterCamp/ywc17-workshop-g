@@ -242,7 +242,7 @@ function Search () {
                             <Media>
                             <Image src={item.img} roundedCircle style={{width: '150px', height: '150px'}}></Image>
                             <Media.Body className="px-3">
-                                <h3><Link to={{pathname: "/profile?id="+item.id}}>{item.quote}</Link></h3>
+                                <h3><Link to={{pathname: "/profile/"+item.id}}>{item.quote}</Link></h3>
                                 <div>
                                     <span>{item.name}</span>
                                     {item.skill.map(skillItem => {
