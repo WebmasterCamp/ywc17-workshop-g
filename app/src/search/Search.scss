@@ -1,0 +1,17 @@
+.search-cat-icon {
+    background-color: gray;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    padding-top: 25px;
+
+    svg {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.search-cat-icon.active {
+    background-color: #F4D25A;
+}

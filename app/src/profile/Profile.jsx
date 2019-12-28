@@ -55,6 +55,7 @@ function Profile() {
             <Accordion>
                 <Card>
                     <Accordion.Toggle as={Card.Header} eventKey="0">
+                        Click me!
                         <Accordion.Collapse eventKey="0">
                             <Card.Body>Hello! I'm the body</Card.Body>
                         </Accordion.Collapse>
