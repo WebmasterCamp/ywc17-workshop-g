@@ -8,18 +8,12 @@ import { ReactComponent as MaleFemaleIcon } from '../assets/malefemale.svg';
 import { ReactComponent as MaleIcon } from '../assets/male.svg';
 import { ReactComponent as FemaleIcon } from '../assets/female.svg';
 
-<<<<<<< HEAD
 import p1 from "../img/1.jpg";
 import p2 from "../img/2.jpg";
 import p3 from "../img/3.jpg";
 import p4 from "../img/4.jpg";
 
 import '../hire/Hire.scss'
-=======
-import { ReactComponent as GardeningIcon } from '../assets/gardener.svg';
-import { ReactComponent as DishwasherIcon } from '../assets/dishwasher.svg';
-import { ReactComponent as HouseKeeperIcon } from '../assets/housekeeper.svg';
->>>>>>> 75485df506f12185e30c5c82bb97bd5173d76b23
 
 import '../hire/Hire.scss';
 import './Search.scss';
