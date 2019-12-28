@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Col, Row, Form, Button, Image, Media, Badge } from 'react-bootstrap';
 import Slider from 'react-bootstrap-slider';
-import Rating from 'react-rating';
+import Rating from '../common/Rating';
 import { Link, useLocation } from 'react-router-dom';
 
 import { ReactComponent as MaleFemaleIcon } from '../assets/malefemale.svg';
@@ -244,9 +244,9 @@ function Search () {
                             <Media.Body className="px-3">
                                 <h3><Link to={{pathname: "/profile?id="+item.id}}>{item.quote}</Link></h3>
                                 <div>
-                                    <span>{item.name}</span>
+                                    <span className="sarabun">{item.name}</span>
                                     {item.skill.map(skillItem => {
-                                        return <Badge variant="dark" className="mx-2">{skillItem}</Badge>
+                                        return <Badge variant="dark" className="mx-1 sarabun">{skillItem}</Badge>
                                     })}
                                 </div>
                                 <Rating
@@ -257,7 +257,7 @@ function Search () {
                                     initialRating={item.rate}
                                     readonly
                                 ></Rating>
-                            <p>
+                            <p className="sarabun">
                                 {item.Story}
                             </p>
                             </Media.Body>

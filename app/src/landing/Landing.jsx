@@ -21,7 +21,7 @@ const LandingPage = () => {
                                 <span>ไร้โอกาส</span>
                             </h2>
                             <h4 className="headLine2">ร่วมให้โอกาส</h4>
-                             <span style={{width: '100px' ,lineHeight: '0.5'}}>มองหาโอกาสให้แก่คนไร้บ้าน
+                             <span className="sarabun" style={{width: '100px' ,lineHeight: '0.5'}}>มองหาโอกาสให้แก่คนไร้บ้าน
                                 ที่ต้องการโอกาสในการทำงาน ในแขนงต่าง ๆ พร้อมทั้งเพิ่มการเรียนรู้ และสกิลที่สำคัญ
                                 สำหรับการดำเนินชีวิตในโลกแห่งการทำงาน พร้อมทั้งเป็นศูนย์กลางพื้นที่ให้แสดงความคิดเห็น
                                 และเผยแพร่ประสบการณ์ชีวิตของแต่ละคน</span>
@@ -33,11 +33,11 @@ const LandingPage = () => {
                                         backgroundColor: '#313A3A', 
                                         border: '3px solid #313A3A', 
                                         borderRadius: '16px',
-                                        color: '#FFFFFF'}} size='lg'>จ้างงาน</Button>
+                                        color: '#FFFFFF'}} size='lg' className="sarabun">จ้างงาน</Button>
                                 </Link>
                             </Col>
                             <Col style={{alignSelf: 'center'}}>
-                                <span>
+                                <span className="sarabun">
                                     หรือเลื่อนลงเพื่ออ่าน Story
                                 </span>
                             </Col>
@@ -73,11 +73,15 @@ const LandingPage = () => {
                 justifyContent: 'center'
             }}>
                 <div style={{textAlign: 'center'}}>
-                    <h1>
+                    <h1 style={{
+                        color: '#F4D25A'
+                    }}>
                         ร่วมช่วยเหลือคนไร้บ้าน
                     </h1>
                     <br></br>
-                    <h1 className="mb-4">
+                    <h1 className="mb-4" style={{
+                        color: 'white'
+                    }}>
                         สนับสนุนเลยตอนนี้
                     </h1>
 

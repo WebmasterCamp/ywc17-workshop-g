@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Accordion, Card, Button, Image, Container, Media, Badge, Modal } from 'react-bootstrap';
-import Rating from 'react-rating';
+import Rating from '../common/Rating';
 
 import p1 from "../img/1.jpg";
 import p2 from "../img/2.jpg";
