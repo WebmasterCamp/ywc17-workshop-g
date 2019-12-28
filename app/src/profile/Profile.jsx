@@ -14,15 +14,15 @@ function ConfirmationModal({show, handleClose, handleConfirm}) {
     return (
         <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
+            <Modal.Title>ยืนยันการจ้าง</Modal.Title>
             </Modal.Header>
-            <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+            <Modal.Body>หากท่านต้องการจ้าง กรุณาคลิกตกลง</Modal.Body>
             <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
-                Close
+                ปิด
             </Button>
             <Button variant="primary" onClick={handleConfirm}>
-                Confirm
+                ตกลง
             </Button>
             </Modal.Footer>
         </Modal>
@@ -34,12 +34,12 @@ function SuccessModal({show, handleClose}) {
     return (
         <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
-            <Modal.Title>Success!</Modal.Title>
+            <Modal.Title>สำเร็จ!</Modal.Title>
             </Modal.Header>
-            <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+            <Modal.Body>คุณจ้างเรียบร้อยแล้ว</Modal.Body>
             <Modal.Footer>
             <Button variant="primary" onClick={handleClose}>
-                OK
+                ปิด
             </Button>
             </Modal.Footer>
         </Modal>
@@ -168,7 +168,7 @@ function Profile() {
             <Accordion>
                 <Card>
                     <Accordion.Toggle as={Card.Header} eventKey="0">
-                        Click me!
+                        อ่านฉันสิ !!!
                         <Accordion.Collapse eventKey="0">
                             <Card.Body>{dataH.Story}</Card.Body>
                         </Accordion.Collapse>
@@ -203,7 +203,7 @@ function Profile() {
                         ></Rating>
 
                     <br />
-                    <Button onClick={() => setShowModal(true)}>Hire</Button>
+                    <Button onClick={() => setShowModal(true)}>จ้าง</Button>
 
                     </Media.Body>
                 </Media>
