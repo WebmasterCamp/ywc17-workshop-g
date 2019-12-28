@@ -67,9 +67,8 @@ function Search(){
 
     return (
         <Container fluid>
-            <Row>   
-                <Form>
-                    Filters
+            <Row>
+                <Form className="pt-5">
                     <Form.Check>
                         <Form.Group controlId="category">
                             <Row>
@@ -115,12 +114,16 @@ function Search(){
                         <Form.Group controlId="wage">
                             <Form.Label>Wage</Form.Label>
                             <br></br>
-                            <Slider id="wage-slider" tooltip="always" value={selectedWage} min={150} max={500} step={10} change={c => setSelectedWage(c.target.value)}></Slider>
+                            <Slider id="wage-slider" tooltip="always" value={selectedWage} min={150} max={500} step={10} change={c => setSelectedWage(c.target.value)}
+                                formatter={value => value[0] + ' - ' + value[1]}
+                            ></Slider>
                         </Form.Group>
                         <Form.Group controlId="age">
-                                <Form.Label>Age</Form.Label>
-                                <br></br>
-                                <Slider id="age-slider" tooltip="always" value={selectedAge} min={24} max={62} step={1} change={c => setSelectedAge(c.target.value)}></Slider>
+                            <Form.Label>Age</Form.Label>
+                            <br></br>
+                            <Slider id="age-slider" tooltip="always" value={selectedAge} min={24} max={62} step={1} change={c => setSelectedAge(c.target.value)}
+                                formatter={value => value[0] + ' - ' + value[1]}
+                            ></Slider>
                             </Form.Group>
                         <Button>Update Filters</Button>
                     </Form.Check>

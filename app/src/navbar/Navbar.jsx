@@ -1,6 +1,9 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
 import { Navbar as BSNavbar } from 'react-bootstrap';
+
+import { ReactComponent as BrandLogo } from '../assets/brand.svg';
 
 import './Navbar.scss';
 
@@ -9,7 +12,11 @@ function Navbar() {
         <BSNavbar 
             className="navbar"
             variant="light">
-        <BSNavbar.Brand style={{color: '#000000'}}>Homesi-res</BSNavbar.Brand>
+        <Link to="/">
+            <BSNavbar.Brand style={{color: '#000000'}}>
+                <BrandLogo height="2em" />
+            </BSNavbar.Brand>
+        </Link>
         </BSNavbar>
     );
 }

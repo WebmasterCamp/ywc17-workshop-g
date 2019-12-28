@@ -10,7 +10,8 @@ const LandingPage = () => {
                 {/* Header */}
                 <Row style={{padding: '0'}}>
                     <Col sm={12} lg={8} md={8} style={{paddingLeft: '0', paddingRight: '0'}}>
-                        <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Flag_of_None.svg/1280px-Flag_of_None.svg.png" fluid/>
+                    {/* <a href="https://imgur.com/VXQlpe5"><img src="https://i.imgur.com/VXQlpe5.jpg" title="source: imgur.com" /></a> */}
+                        <Image src="https://i.imgur.com/VXQlpe5.jpg" fluid/>
                     </Col>
                     <Col  sm={12} lg={4} md={4}>
                         <div id="mainHeaderTitle" style={{marginTop: '100px'}}>

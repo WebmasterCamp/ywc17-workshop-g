@@ -4,6 +4,10 @@
     opacity: 0.9;
 }
 
+* {
+    font-family: Chonburi;
+}
+
 h1{
     font-family: Chonburi;
     font-style: normal;
@@ -49,4 +53,12 @@ body{
     font-size: 12px;
     line-height: 16px;
     color: #000000;
+}
+
+#age-slider {
+    width: 100%;
+}
+
+#wage-slider {
+    width: 100%;
 }
