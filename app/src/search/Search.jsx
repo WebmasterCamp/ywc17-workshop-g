@@ -70,9 +70,9 @@ function Search(){
                     <Media>
                         <Image src="https://via.placeholder.com/150" roundedCircle></Image>
                         <Media.Body className="px-3">
-                            <h3>header</h3>
+                            <h3>สลากแดง แพลงชีวิต</h3>
                             <div>
-                                <span>name</span>
+                                <span>นายดำ ศักดิ์ชัย</span>
                                 <Badge variant="dark" className="mx-2">Cat1</Badge>
                                 <Badge variant="dark" className="mx-2">Cat1</Badge>
                             </div>
@@ -85,7 +85,8 @@ function Search(){
                                 readonly
                             ></Rating>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci laborum voluptate minima maiores mollitia tempore asperiores! Quibusdam omnis debitis pariatur quisquam id nulla, suscipit ex. Illo pariatur impedit quos debitis?
+                            เรื่องราว : จาก "ดำ" เกษตรกรรับจ้างในไร่มันสัมปะหลัง จังหวัดนครราชสีมา กลับต้องมาทำหน้าที่รับใช้สังคมตอนอายุ 21 ปี ชีวิตพลิกผลันครั้งยิ่งใหญ่โดยไม่รู้เนื้อ รู้ตัว หลังออกจากกองทัพอย่างไร้เงินเก็บ ไร้การรองรับทางความสามารถ ทำให้ "ดำ" จำใจต้องย้ายเข้ามาหางานในกรุงเทพฯ หวังใช้ชีวิต "ร่อนเร่" ได้อย่างมีคุณภาพมากยิ่งขึ้น
+Available ตัดต้นไม้
                             </p>
                         </Media.Body>
                     </Media>
