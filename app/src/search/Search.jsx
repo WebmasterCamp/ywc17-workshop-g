@@ -17,11 +17,11 @@ import './Search.scss';
 
 function CategoryPreviewFilter({ categoryName, icon, active, onClick }) {
     return (
-        <Container fluid onClick={onClick}>
+        <div style={{flex: 1}} onClick={onClick}>
             <Row className={"justify-content-md-center search-cat-icon " + (active ? 'active' : '')}>
                 {icon}
             </Row>
-        </Container>
+        </div>
     )
 }
 
@@ -72,23 +72,17 @@ function Search(){
                 <Col md={{span: 3}} className="pt-4 px-4 search-sidebar">
                     <Form>
                         <Form.Group controlId="category">
-                            <Row>
-                                <Col>
-                                    <CategoryPreviewFilter categoryName="gardening" active={selectedCategory == 'gardening'} 
-                                    icon={<GardeningIcon />}
-                                    onClick={() => setSelectedCategory('gardening')}
-                                    />
-                                </Col>
-                                <Col>
-                                    <CategoryPreviewFilter categoryName="dishes" active={selectedCategory == 'dishes'} icon={<DishwasherIcon />}
-                                    onClick={() => setSelectedCategory('dishes')}
-                                    />
-                                </Col>
-                                <Col>
-                                    <CategoryPreviewFilter categoryName="cleaning" active={selectedCategory == 'cleaning'} icon={<HouseKeeperIcon />} 
-                                    onClick={() => setSelectedCategory('cleaning')}
-                                    />
-                                </Col>
+                            <Row className="d-flex">
+                                <CategoryPreviewFilter categoryName="gardening" active={selectedCategory == 'gardening'} 
+                                icon={<GardeningIcon width="100%" />}
+                                onClick={() => setSelectedCategory('gardening')}
+                                />
+                                <CategoryPreviewFilter categoryName="dishes" active={selectedCategory == 'dishes'} icon={<DishwasherIcon />}
+                                onClick={() => setSelectedCategory('dishes')}
+                                />
+                                <CategoryPreviewFilter categoryName="cleaning" active={selectedCategory == 'cleaning'} icon={<HouseKeeperIcon />} 
+                                onClick={() => setSelectedCategory('cleaning')}
+                                />
                             </Row>
                         </Form.Group>
                         <Form.Group controlId="location">

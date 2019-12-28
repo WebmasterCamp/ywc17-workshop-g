@@ -11,10 +11,12 @@ function Navbar() {
     return (
         <BSNavbar 
             className="navbar"
-            variant="light">
+            variant="light"
+            style={{position: 'sticky', width: '100%', zIndex: '1000', top: '0'}}
+        >
         <Link to="/">
             <BSNavbar.Brand style={{color: '#000000'}}>
-                <BrandLogo height="2em" />
+                <BrandLogo height="40px" />
             </BSNavbar.Brand>
         </Link>
         </BSNavbar>

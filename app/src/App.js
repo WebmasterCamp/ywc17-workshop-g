@@ -13,20 +13,20 @@ function App() {
     <div>
       <Router>
         <Navbar></Navbar>
-        <Switch>
-          <Route exact path="/">
-            <LandingPage />
-          </Route>
-          <Route path="/hire">
-            <Hire />
-          </Route>
-          <Route path="/search">
-            <Search />
-          </Route>
-          <Route path="/profile">
-            <Profile />
-          </Route>
-        </Switch>
+          <Switch>
+            <Route exact path="/">
+              <LandingPage />
+            </Route>
+            <Route path="/hire">
+              <Hire />
+            </Route>
+            <Route path="/search">
+              <Search />
+            </Route>
+            <Route path="/profile">
+              <Profile />
+            </Route>
+          </Switch>
       </Router> 
     </div>
   );
