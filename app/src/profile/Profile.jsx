@@ -1,5 +1,5 @@
 import React from 'react';
-import { Accordion, Card, Row, Col, Image, Container, Media, Badge } from 'react-bootstrap';
+import { Accordion, Card, Button, Image, Container, Media, Badge } from 'react-bootstrap';
 import Rating from 'react-rating';
 
 function Profile() {
@@ -44,8 +44,13 @@ function Profile() {
                             step={1}
                             stop={5}
                         ></Rating>
+
+                    <br />
+                    <Button>Hire</Button>
+
                     </Media.Body>
                 </Media>
+
 
                 <hr></hr>
 

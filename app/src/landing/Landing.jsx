@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Button, Image } from 'react-bootstrap'
-import './Landing.css';
+import './Landing.scss';
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
     return (
@@ -34,11 +35,13 @@ const LandingPage = () => {
                             </Col>
                             
                             <Col sm={{span: 4}} md={{span: 4}} xs={{span: 4}} md={{span: 4}} lg={{span: 4}} md={{span: 4}} style={{textAlign: 'center'}}>
-                                <Button style={{
-                                    backgroundColor: '#313A3A', 
-                                    border: '3px solid #313A3A', 
-                                    borderRadius: '16px',
-                                    color: '#FFFFFF'}} size='lg'>จ้างงาน</Button>
+                                <Link to="/hire">
+                                    <Button style={{
+                                        backgroundColor: '#313A3A', 
+                                        border: '3px solid #313A3A', 
+                                        borderRadius: '16px',
+                                        color: '#FFFFFF'}} size='lg'>จ้างงาน</Button>
+                                </Link>
                             </Col>
 >
                         </Row>

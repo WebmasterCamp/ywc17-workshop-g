@@ -6,6 +6,7 @@ import './index.scss';
 import Search from './search/Search';
 import Navbar from './navbar/Navbar';
 import Profile from './profile/Profile';
+import 'react-bootstrap-typeahead/css/Typeahead.css';
 
 function App() {
   return (

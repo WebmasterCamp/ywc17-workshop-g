@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Form, Container, FormLabel, Row, Image, Col } from 'react-bootstrap';
 
+import { Link } from 'react-router-dom';
+
 import Slider from 'react-bootstrap-slider';
+
+import { ReactComponent as MaleFemaleIcon } from '../assets/malefemale.svg';
+import { ReactComponent as MaleIcon } from '../assets/male.svg';
+import { ReactComponent as FemaleIcon } from '../assets/female.svg';
+
+import './Hire.scss';
 
 function CategoryPreview({ categoryName }) {
     return (
@@ -17,6 +25,9 @@ function CategoryPreview({ categoryName }) {
 }
 
 function Hire() {
+    const [selectedCategory, setSelectedCategory] = useState(0);
+    const [selectedGender, setSelectedGender] = useState('any');
+    
     return (
         <Container>
             <h1>header text</h1>
@@ -51,18 +62,23 @@ function Hire() {
                     <Form.Group controlId="gender">
                         <Form.Label>gender</Form.Label>
                         <div className="d-flex justify-content-start">
-                            <div>
-                                Male + female    
-                            </div>
-                            <div>
-                                Male
-                            </div>
-                            <div>
-                                Female
-                            </div>
+                            <MaleFemaleIcon style={{ height: '40px'}} 
+                                className={'gender-icon ' + (selectedGender == 'any' ? 'active' : '')}
+                                onClick={() => setSelectedGender('any')}
+                            />
+                            <MaleIcon 
+                                className={'gender-icon ' + (selectedGender == 'male' ? 'active' : '')}
+                                onClick={() => setSelectedGender('male')}
+                            />
+                            <FemaleIcon
+                                className={'gender-icon ' + (selectedGender == 'female' ? 'active' : '')}
+                                onClick={() => setSelectedGender('female')}
+                            />
                         </div>
                     </Form.Group>
-                    <Button>Search</Button>
+                    <Link to="/search">
+                        <Button>Search</Button>
+                    </Link>
                 </Form>
             </div>
         </Container>

@@ -18,7 +18,7 @@ function Search(){
     return (
         <Container fluid>
             <Row>   
-                <Form md={{span: 3}}>
+                <Form>
                     Filters
                     <Form.Check>
                         <Form.Group controlId="category">
