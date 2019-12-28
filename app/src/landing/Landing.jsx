@@ -4,7 +4,7 @@ import './Landing.css';
 
 const LandingPage = () => {
     return (
-        <div class="mainElement">
+        <div className="mainElement">
             <Container  fluid={true}>
                 {/* Header */}
                 <Row style={{padding: '0'}}>
@@ -13,31 +13,44 @@ const LandingPage = () => {
                     </Col>
                     <Col  sm={12} lg={4} md={4}>
                         <div id="mainHeaderTitle" style={{marginTop: '100px'}}>
-                            <h2 id="mainHeadTitle" class="headLine1">คนไร้บ้านต้องการ ทำงาน</h2>
-                            <h4 class="headLine2">ร่วมให้โอกาส</h4>
-                            <span style={{lineHeight: '0.5'}}>ร่วมกันตระหนักถึงปัญหาของคน ไร้บ้านในประเทศไทย และช่วยเหลือ</span>
+                            <h2 id="mainHeadTitle" className="headLine1">
+                                <span>ไร้บ้าน</span>
+                                <span>แต่ไม่</span>
+                                <span>ไร้โอกาส</span>
+                            </h2>
+                            <h4 className="headLine2">ร่วมให้โอกาส</h4>
+                             <span style={{width: '100px' ,lineHeight: '0.5'}}>มองหาโอกาสให้แก่คนไร้บ้าน
+                                ที่ต้องการโอกาสในการทำงาน ในแขนงต่าง ๆ พร้อมทั้งเพิ่มการเรียนรู้ และสกิลที่สำคัญ
+                                สำหรับการดำเนินชีวิตในโลกแห่งการทำงาน พร้อมทั้งเป็นศูนย์กลางพื้นที่ให้แสดงความคิดเห็น
+                                และเผยแพร่ประสบการณ์ชีวิตของแต่ละคน</span>
                         </div>
-                        <div className="row">
-                            <div className="col-lg-6 col-md-6 col-sm-6 " style={{textAlign: 'center'}}>
-                                <Button style={{backgroundColor: '#FFFFFF', border: '3px solid #313A3A', borderRadius: '16px'}} size='lg' >อ่าน Story</Button>
-                            </div>
+                       <Row style={{marginTop: '20px'}}>
+                            <Col sm={{span: 4, offset: 2}} md={{span: 4}} xs={{span: 4, offset: 2}} md={{span: 4}} lg={{span: 4, offset: 2}} md={{span: 4, offset: 2}} style={{textAlign: 'center'}}>
+                                <Button style={{
+                                    backgroundColor: '#FFFFFF', 
+                                    border: '3px solid #313A3A', 
+                                    borderRadius: '16px',
+                                    color: '#313A3A'}} size='lg' >อ่าน Story</Button>
+                            </Col>
                             
-                            <div className="col-md- col-sm-56col-lg-55"style={{textAlign: 'center'}}>
-                                <Button size='lg'>จ้างงาน</Button>
-                            </div>
-                        </div>
+                            <Col sm={{span: 4}} md={{span: 4}} xs={{span: 4}} md={{span: 4}} lg={{span: 4}} md={{span: 4}} style={{textAlign: 'center'}}>
+                                <Button style={{
+                                    backgroundColor: '#313A3A', 
+                                    border: '3px solid #313A3A', 
+                                    borderRadius: '16px',
+                                    color: '#FFFFFF'}} size='lg'>จ้างงาน</Button>
+                            </Col>
+>
+                        </Row>
                     </Col>
                 </Row>
-                {/* <Row >
-                    <Col  sm={{span: 1, offset: 4}} lg={{span: 6, offset: 4}} md={{span: 6, offset: 4}}>
-
-                    </Col>
-                </Row> */}
             </Container>
+
             <Container fluid={true}>
                 {/* VDO and Story */}
-                <Row>
-                    <Col lg={{span: 3, offset: 2}} md={{span: 3, offset: 2}} sm>
+                <Row style={{paddin: '0'}}>
+                    <Col sm xs lg={6} md={6}>เรื่องราวของคนไร้บ้าน</Col>
+                    <Col sm={12} xs lg={6} md={6} style={{paddingLeft: '0', paddingRight: '0'}}>
                     <iframe 
                         width="100%" 
                         height="315px" 
@@ -46,7 +59,7 @@ const LandingPage = () => {
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen/>
                     </Col>
-                    <Col lg={{span: 3, offset: 1}} md={{span: 3, offset: 1}} sm>
+                    <Col lg={{span: 5, offset: 1}} md={{span: 5, offset: 1}} sm>
                         <b>Text 3</b>
                         <p style={{textAlign: 'center'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                     </Col>

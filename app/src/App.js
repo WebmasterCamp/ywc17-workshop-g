@@ -2,18 +2,16 @@ import React, { Profiler } from 'react';
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import LandingPage from './landing/Landing';
 import Hire from './hire/Hire';
-import './index.css';
+import './index.scss';
 import Search from './search/Search';
-import { Navbar } from 'react-bootstrap';
+import Navbar from './navbar/Navbar';
 import Profile from './profile/Profile';
 
 function App() {
   return (
     <div>
-      <Navbar bg="dark" variant="dark">
-        <Navbar.Brand>Brand</Navbar.Brand>
-      </Navbar>
       <Router>
+        <Navbar></Navbar>
         <Switch>
           <Route exact path="/">
             <LandingPage />

@@ -40,11 +40,17 @@ function Search(){
                         </Form.Group>
                         <Form.Group controlId="gender">
                             <Form.Label>gender</Form.Label>
-                            <Form.Control as="select">
-                                <option>any</option>
-                                <option>Male</option>
-                                <option>Female</option>
-                            </Form.Control>
+                            <div className="d-flex justify-content-start">
+                                <div>
+                                    Male + female    
+                                </div>
+                                <div>
+                                    Male
+                                </div>
+                                <div>
+                                    Female
+                                </div>
+                            </div>
                         </Form.Group>
                         <Form.Group controlId="age">
                                 <Form.Label>Age</Form.Label>

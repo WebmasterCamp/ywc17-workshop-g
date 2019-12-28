@@ -1,5 +1,6 @@
 import React from 'react';
 import { Accordion, Card, Row, Col, Image, Container, Media, Badge } from 'react-bootstrap';
+import Rating from 'react-rating';
 
 function Profile() {
     return (
@@ -17,7 +18,7 @@ function Profile() {
             <Container fluid>
                 <Media>
                     <Image src="https://via.placeholder.com/300" roundedCircle style={{padding: '2em'}}></Image>
-                    <Media.Body>
+                    <Media.Body className="mt-5">
                         <h3>Person Name</h3>
                         <p>
                             more information <br></br>
@@ -34,8 +35,37 @@ function Profile() {
                             <Badge className="mx-2" variant="dark">Skill1</Badge>
                             <Badge className="mx-2" variant="dark">Skill1</Badge>
                         </div>
+                        <h4>Rating</h4>
+                        <Rating
+                            readonly
+                            initialRating={2.5}
+                            fractions={2}
+                            start={0}
+                            step={1}
+                            stop={5}
+                        ></Rating>
                     </Media.Body>
                 </Media>
+
+                <hr></hr>
+
+                <h3>Comments</h3>
+
+                <Card>
+                    <Card.Body>
+                        <Rating
+                            readonly
+                            initialRating={2.5}
+                            fractions={2}
+                            start={0}
+                            step={1}
+                            stop={5}
+                        ></Rating>
+                        <br></br>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque voluptatibus obcaecati aut, qui aliquam magni rerum? Rerum, accusamus asperiores aut facilis rem quas illo. Reprehenderit assumenda cupiditate dolorem omnis molestiae!
+                    </Card.Body>
+                    <Card.Footer><em>author</em></Card.Footer>
+                </Card>
             </Container>
         </div>
     )
