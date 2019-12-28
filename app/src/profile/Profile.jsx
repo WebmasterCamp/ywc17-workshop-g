@@ -168,6 +168,7 @@ function Profile() {
             <Accordion>
                 <Card>
                     <Accordion.Toggle as={Card.Header} eventKey="0">
+                        Click me!
                         <Accordion.Collapse eventKey="0">
                             <Card.Body>{dataH.Story}</Card.Body>
                         </Accordion.Collapse>

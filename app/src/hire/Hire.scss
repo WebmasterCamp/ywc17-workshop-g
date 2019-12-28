@@ -5,3 +5,15 @@
 .gender-icon.active {
     fill: #F4D25A;
 }
+
+.cat-icon {
+    background-color: gray;
+    padding: 2em;
+    border-radius: 50%;
+
+    animation: background-color 0.2s;
+}
+
+.cat-icon.active {
+    background-color: #F4D25A;
+}

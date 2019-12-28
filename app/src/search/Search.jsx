@@ -2,24 +2,33 @@ import React, { useState } from 'react';
 import { Container, Col, Row, Form, Button, Image, Media, Badge } from 'react-bootstrap';
 import Slider from 'react-bootstrap-slider';
 import Rating from 'react-rating';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import { ReactComponent as MaleFemaleIcon } from '../assets/malefemale.svg';
 import { ReactComponent as MaleIcon } from '../assets/male.svg';
 import { ReactComponent as FemaleIcon } from '../assets/female.svg';
 
+<<<<<<< HEAD
 import p1 from "../img/1.jpg";
 import p2 from "../img/2.jpg";
 import p3 from "../img/3.jpg";
 import p4 from "../img/4.jpg";
 
 import '../hire/Hire.scss'
+=======
+import { ReactComponent as GardeningIcon } from '../assets/gardener.svg';
+import { ReactComponent as DishwasherIcon } from '../assets/dishwasher.svg';
+import { ReactComponent as HouseKeeperIcon } from '../assets/housekeeper.svg';
+>>>>>>> 75485df506f12185e30c5c82bb97bd5173d76b23
 
-function CategoryPreviewFilter({ categoryName }) {
+import '../hire/Hire.scss';
+import './Search.scss';
+
+function CategoryPreviewFilter({ categoryName, icon, active, onClick }) {
     return (
-        <Container fluid>
-            <Row className="justify-content-md-center">
-                <Image src={`https://via.placeholder.com/75?text=${categoryName || 'no name'}`} roundedCircle></Image>
+        <Container fluid onClick={onClick}>
+            <Row className={"justify-content-md-center search-cat-icon " + (active ? 'active' : '')}>
+                {icon}
             </Row>
         </Container>
     )

@@ -4,6 +4,10 @@
     opacity: 0.9;
 }
 
+* {
+    font-family: Chonburi;
+}
+
 h1{
     font-family: Chonburi;
     font-style: normal;
@@ -50,3 +54,46 @@ body{
     line-height: 16px;
     color: #000000;
 }
+
+#age-slider {
+    width: 100%;
+
+    .slider-selection {
+        background: #313A3A;
+    }
+
+    .slider-handle {
+        background: #313A3A;
+    }
+}
+
+#wage-slider {
+    width: 100%;
+
+    .slider-selection {
+        background: #F4D25A;
+    }
+
+    .slider-handle {
+        background: #F4D25A;
+    }
+}
+
+.search-sidebar {
+    background-color: #313A3A;
+    
+    color: white;
+
+    min-height: 100vh;
+    
+    #age-slider {
+        width: 100%;
+    
+        .slider-selection {
+            background: #F4D25A;
+        }
+    
+        .slider-handle {
+            background: #F4D25A;
+        }
+    }}
