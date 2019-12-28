@@ -8,21 +8,21 @@ import p3 from "../img/3.jpg";
 import p4 from "../img/4.jpg";
 
 import Query_string from 'query-string'
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation, useParams, useRouteMatch } from 'react-router-dom';
 
 function ConfirmationModal({show, handleClose, handleConfirm}) {
     return (
         <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
+            <Modal.Title>ยืนยันการจ้าง</Modal.Title>
             </Modal.Header>
-            <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+            <Modal.Body>หากท่านต้องการจ้าง กรุณาคลิกตกลง</Modal.Body>
             <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
-                Close
+                ปิด
             </Button>
             <Button variant="primary" onClick={handleConfirm}>
-                Confirm
+                ตกลง
             </Button>
             </Modal.Footer>
         </Modal>
@@ -34,12 +34,12 @@ function SuccessModal({show, handleClose}) {
     return (
         <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
-            <Modal.Title>Success!</Modal.Title>
+            <Modal.Title>สำเร็จ!</Modal.Title>
             </Modal.Header>
-            <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+            <Modal.Body>คุณจ้างเรียบร้อยแล้ว</Modal.Body>
             <Modal.Footer>
             <Button variant="primary" onClick={handleClose}>
-                OK
+                ปิด
             </Button>
             </Modal.Footer>
         </Modal>
@@ -146,9 +146,9 @@ function Profile() {
         },
     ]
     const location = useLocation();
-    const HomeLessId = location.search.split('=')[1]
-    const homelessdata = data.filter(item => item.id == HomeLessId)
-    const [dataH, h] = useState(homelessdata[0]);
+    const match = useRouteMatch();
+    const HomeLessId = match.params.id;    
+    const dataH = data[HomeLessId]
     const [showModal, setShowModal] = useState(false);
     const [showSuccessModal, setShowSuccessModal] = useState(false);
 
@@ -168,7 +168,7 @@ function Profile() {
             <Accordion>
                 <Card>
                     <Accordion.Toggle as={Card.Header} eventKey="0">
-                        Click me!
+                        อ่านฉันสิ !!!
                         <Accordion.Collapse eventKey="0">
                             <Card.Body>{dataH.Story}</Card.Body>
                         </Accordion.Collapse>
@@ -203,7 +203,7 @@ function Profile() {
                         ></Rating>
 
                     <br />
-                    <Button onClick={() => setShowModal(true)}>Hire</Button>
+                    <Button onClick={() => setShowModal(true)}>จ้าง</Button>
 
                     </Media.Body>
                 </Media>
