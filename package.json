@@ -1,0 +1,27 @@
+{
+  "name": "ywc17-workshop-g",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebmasterCamp/ywc17-workshop-g.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WebmasterCamp/ywc17-workshop-g/issues"
+  },
+  "homepage": "https://github.com/WebmasterCamp/ywc17-workshop-g#readme",
+  "devDependencies": {
+    "create-react-app": "^3.3.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "react-bootstrap": "^1.0.0-beta.16"
+  }
+}
